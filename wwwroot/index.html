@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa com Geolocalização e Rota</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #addressForm,
+        #endAddressForm {
+            position: absolute;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #addressForm {
+            top: 20px;
+            left: 50px;
+        }
+
+        #endAddressForm {
+            top: 140px;
+            left: 50px;
+        }
+
+        #addressForm input,
+        #endAddressForm input {
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        #addressForm button,
+        #endAddressForm button {
+            cursor: pointer;
+        }
+
+        #distanceLabel {
+            position: absolute;
+            top: 260px;
+            left: 50px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="addressForm">
+        <label for="startAddress">Digite o endereço de partida:</label><br>
+        <input type="text" id="startAddress" placeholder="Ex: Avenida Paulista, São Paulo" required />
+        <button type="submit">Buscar Partida</button>
+    </form>
+
+    <form id="endAddressForm">
+        <label for="endAddress">Digite o endereço de chegada:</label><br>
+        <input type="text" id="endAddress" placeholder="Ex: Rua Augusta, São Paulo" required />
+        <button type="submit">Buscar Chegada</button>
+    </form>
+
+    <div id="distanceLabel">Distância: -</div>
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script>
+        const geoApiUrl = 'http://localhost:5000/api/GeoLocation/GetCoordinates'; // Substitua pela sua API
+        const osrmBaseUrl = 'http://router.project-osrm.org/route/v1/driving'; // URL base do OSRM
+
+        const map = L.map('map').setView([-23.55052, -46.633308], 10);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        let startMarker = null;
+        let endMarker = null;
+        let routeLine = null;
+
+        const startForm = document.getElementById('addressForm');
+        const endForm = document.getElementById('endAddressForm');
+        const distanceLabel = document.getElementById('distanceLabel');
+
+        let startCoordinates = null;
+        let endCoordinates = null;
+
+        startForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const address = document.getElementById('startAddress').value;
+            if (!address) {
+                alert('Por favor, digite o endereço de partida.');
+                return;
+            }
+
+            try {
+                const coordinates = await fetchCoordinates(address);
+                if (coordinates) {
+                    startCoordinates = coordinates;
+
+                    if (startMarker) {
+                        map.removeLayer(startMarker);
+                    }
+
+                    startMarker = L.marker([coordinates.latitude, coordinates.longitude]).addTo(map)
+                        .bindPopup(`Ponto de partida: ${address}`)
+                        .openPopup();
+
+                    map.setView([coordinates.latitude, coordinates.longitude], 15);
+
+                    if (startCoordinates && endCoordinates) {
+                        await traceRoute(startCoordinates, endCoordinates);
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao buscar coordenadas:', error);
+            }
+        });
+
+        endForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const address = document.getElementById('endAddress').value;
+            if (!address) {
+                alert('Por favor, digite o endereço de chegada.');
+                return;
+            }
+
+            try {
+                const coordinates = await fetchCoordinates(address);
+                if (coordinates) {
+                    endCoordinates = coordinates;
+
+                    if (endMarker) {
+                        map.removeLayer(endMarker);
+                    }
+
+                    endMarker = L.marker([coordinates.latitude, coordinates.longitude]).addTo(map)
+                        .bindPopup(`Ponto de chegada: ${address}`)
+                        .openPopup();
+
+                    map.setView([coordinates.latitude, coordinates.longitude], 15);
+
+                    if (startCoordinates && endCoordinates) {
+                        await traceRoute(startCoordinates, endCoordinates);
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao buscar coordenadas:', error);
+            }
+        });
+
+        async function fetchCoordinates(address) {
+            const response = await fetch(geoApiUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ endereco: address })
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                return { latitude: data.latitude, longitude: data.longitude };
+            } else {
+                alert('Erro ao buscar coordenadas: ' + response.statusText);
+                return null;
+            }
+        }
+
+        async function traceRoute(start, end) {
+            const routeUrl = `${osrmBaseUrl}/${start.longitude},${start.latitude};${end.longitude},${end.latitude}?overview=full&geometries=geojson`;
+
+            try {
+                const response = await fetch(routeUrl);
+                if (response.ok) {
+                    const data = await response.json();
+                    const route = data.routes[0];
+
+                    if (route) {
+                        if (routeLine) {
+                            map.removeLayer(routeLine);
+                        }
+
+                        routeLine = L.geoJSON(route.geometry, {
+                            style: { color: 'blue', weight: 4 }
+                        }).addTo(map);
+
+                        const distance = route.distance / 1000; // Distância em km
+                        distanceLabel.textContent = `Distância: ${distance.toFixed(2)} km`;
+                    } else {
+                        alert('Rota não encontrada.');
+                    }
+                } else {
+                    alert('Erro ao calcular a rota: ' + response.statusText);
+                }
+            } catch (error) {
+                console.error('Erro ao calcular a rota:', error);
+            }
+        }
+    </script>
+</body>
+
+</html>
