@@ -35,8 +35,11 @@ if (app.Environment.IsDevelopment())
 // Habilitar CORS
 app.UseCors("AllowAll");
 
-// Redirecionar HTTP para HTTPS (se necessário)
-app.UseHttpsRedirection();
+// Servir arquivos estáticos da pasta wwwroot (para index.html e outros arquivos estáticos)
+app.UseStaticFiles();
+
+// Servir o arquivo index.html como página inicial
+app.UseDefaultFiles(); // Middleware que serve o index.html automaticamente quando acessado a URL base
 
 // Mapear os controladores
 app.MapControllers();
