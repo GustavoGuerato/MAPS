@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q8nisBvMxaSU4Ku8RY0yi8u2xzdUhHHm9bRYdqwdEy0=",
+  "Hash": "Ek7sOc2VAaQqKQ9WqYZs/pUrcNk+azwmw+Ft6313fCc=",
   "Source": "Imaps",
   "BasePath": "_content/Imaps",
   "Mode": "Default",
@@ -1319,12 +1319,12 @@
       "OriginalItemSpec": "C:\\Users\\gustavo\\Imaps\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-fk9vyja4vu.gz",
+      "Identity": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-ou4nelvkq0.gz",
       "SourceId": "Imaps",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Imaps",
-      "RelativePath": "index#[.{fingerprint=fk9vyja4vu}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=ou4nelvkq0}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "C:\\Users\\gustavo\\Imaps\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ibhcro6ikf",
-      "Integrity": "rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA=",
+      "Fingerprint": "sm7syls6df",
+      "Integrity": "pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\gustavo\\Imaps\\wwwroot\\index.html"
@@ -1480,8 +1480,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fk9vyja4vu",
-      "Integrity": "0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ=",
+      "Fingerprint": "ou4nelvkq0",
+      "Integrity": "sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -3962,13 +3962,13 @@
       ]
     },
     {
-      "Route": "index.fk9vyja4vu.html",
-      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-fk9vyja4vu.gz",
+      "Route": "index.html",
+      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-ou4nelvkq0.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000500500501"
+          "Quality": "0.000441696113"
         }
       ],
       "ResponseHeaders": [
@@ -3978,19 +3978,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1997"
+          "Value": "2263"
         },
         {
           "Name": "ETag",
-          "Value": "\"rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA=\""
+          "Value": "\"pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -4006,26 +4006,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ=\""
+          "Value": "W/\"sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "fk9vyja4vu"
-        },
-        {
-          "Name": "label",
-          "Value": "index.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ="
+          "Value": "sha256-sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo="
         }
       ]
     },
     {
-      "Route": "index.fk9vyja4vu.html",
+      "Route": "index.html",
       "AssetFile": "C:\\Users\\gustavo\\Imaps\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -4035,7 +4027,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7593"
+          "Value": "8724"
         },
         {
           "Name": "Content-Type",
@@ -4043,11 +4035,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ=\""
+          "Value": "\"sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-ou4nelvkq0.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2263"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U="
+        }
+      ]
+    },
+    {
+      "Route": "index.ou4nelvkq0.html",
+      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-ou4nelvkq0.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000441696113"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2263"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ou4nelvkq0"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo="
+        }
+      ]
+    },
+    {
+      "Route": "index.ou4nelvkq0.html",
+      "AssetFile": "C:\\Users\\gustavo\\Imaps\\wwwroot\\index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8724"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4057,7 +4194,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fk9vyja4vu"
+          "Value": "ou4nelvkq0"
         },
         {
           "Name": "label",
@@ -4065,13 +4202,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ="
+          "Value": "sha256-sFV/xaMgcv7+8NFng5YKsJCXrR9yZKvrP9e0zJTsMSo="
         }
       ]
     },
     {
-      "Route": "index.fk9vyja4vu.html.gz",
-      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-fk9vyja4vu.gz",
+      "Route": "index.ou4nelvkq0.html.gz",
+      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-ou4nelvkq0.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4080,7 +4217,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1997"
+          "Value": "2263"
         },
         {
           "Name": "Content-Type",
@@ -4088,11 +4225,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA=\""
+          "Value": "\"pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
+          "Value": "Tue, 03 Dec 2024 17:34:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4110,7 +4247,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fk9vyja4vu"
+          "Value": "ou4nelvkq0"
         },
         {
           "Name": "label",
@@ -4118,144 +4255,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-fk9vyja4vu.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000500500501"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1997"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ="
-        }
-      ]
-    },
-    {
-      "Route": "index.html",
-      "AssetFile": "C:\\Users\\gustavo\\Imaps\\wwwroot\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7593"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0Y9xW7XixIHbMFE0jOO5I7+OoMrH6DohcMQb8MJmQSQ="
-        }
-      ]
-    },
-    {
-      "Route": "index.html.gz",
-      "AssetFile": "C:\\Users\\gustavo\\Imaps\\obj\\Debug\\net9.0\\compressed\\z28f6ktvb0-fk9vyja4vu.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1997"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 29 Nov 2024 18:26:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-rh3nuJGk+WRl/YcJYnnEwCpHvVoJyd6U0wYTYJwr7vA="
+          "Value": "sha256-pCufh74O8Fh14YiqYBlPeyPZlj/8uWaGkN65XGGhS4U="
         }
       ]
     },

@@ -103,4 +103,5 @@ C:\Users\gustavo\Imaps\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\gustavo\Imaps\obj\Debug\net9.0\Imaps.csproj.AssemblyReference.cache
 C:\Users\gustavo\Imaps\obj\Debug\net9.0\Imaps.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\gustavo\Imaps\obj\Debug\net9.0\Imaps.csproj.Up2Date
-C:\Users\gustavo\Imaps\obj\Debug\net9.0\compressed\z28f6ktvb0-fk9vyja4vu.gz
+C:\Users\gustavo\Imaps\obj\Debug\net9.0\Imaps.sourcelink.json
+C:\Users\gustavo\Imaps\obj\Debug\net9.0\compressed\z28f6ktvb0-ou4nelvkq0.gz

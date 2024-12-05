@@ -1,0 +1,12 @@
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Imaps.exe
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\appsettings.json
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Imaps.dll
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Imaps.deps.json
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Imaps.runtimeconfig.json
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Imaps.pdb
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Microsoft.OpenApi.dll
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Newtonsoft.Json.dll
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\gustavo\Imaps\bin\Release\net9.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
