@@ -1,34 +1,31 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurando o CORS (Recomenda-se limitar as origens em produção)
+// Configurando o CORS (permitir qualquer origem, método e cabeçalho)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
     {
-        // Durante o desenvolvimento, você pode permitir qualquer origem
-        // Em produção, é recomendado restringir as origens para maior segurança
         policy.AllowAnyOrigin()
               .AllowAnyMethod()
               .AllowAnyHeader();
     });
 });
 
-// Adicionando serviços à aplicação
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Configurando o Kestrel para escutar na porta configurada pelo Azure (ou 5000 localmente)
+// Configurando o Kestrel para escutar a porta dinâmica fornecida pelo Azure (ou 5000 localmente)
 builder.WebHost.ConfigureKestrel(options =>
 {
-    // Converte a variável de ambiente "PORT" para um número inteiro, ou usa 5000 como padrão
-    int port = int.TryParse(Environment.GetEnvironmentVariable("PORT"), out var parsedPort) ? parsedPort : 5000;
-    options.Listen(System.Net.IPAddress.Any, port);
+    // Usando a variável de ambiente PORT (Azure fornece essa variável para definir a porta)
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "5000"; // 5000 como valor padrão
+    options.Listen(System.Net.IPAddress.Any, int.Parse(port)); // Configura a porta dinâmica
 });
 
 var app = builder.Build();
 
-// Configurando middlewares para o ambiente de desenvolvimento
+// Ativando o Swagger apenas em ambiente de desenvolvimento
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -38,11 +35,11 @@ if (app.Environment.IsDevelopment())
 // Habilitar CORS
 app.UseCors("AllowAll");
 
-// Configurar mapeamento de controladores
+// Redirecionar HTTP para HTTPS (se necessário)
+app.UseHttpsRedirection();
+
+// Mapear os controladores
 app.MapControllers();
 
-// Configurar o roteamento para arquivos estáticos da pasta wwwroot (para o index.html)
-app.UseStaticFiles(); // Habilita o acesso aos arquivos estáticos
-
-// Executar a aplicação
+// Iniciar a aplicação
 app.Run();
